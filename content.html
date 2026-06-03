@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>閱讀館歡迎頁</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            background: linear-gradient(180deg, #0d1323 0%, #111827 100%);
+            color: #f8fafc;
+            font-family: 'Noto Sans TC', 'Segoe UI', sans-serif;
+        }
+
+        .panel {
+            width: min(100%, 860px);
+            background: rgba(15, 23, 42, 0.96);
+            border: 1px solid rgba(148, 163, 184, 0.18);
+            border-radius: 26px;
+            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.24);
+            padding: 40px 44px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2.2rem, 4vw, 3.4rem);
+            line-height: 1.05;
+            letter-spacing: -0.04em;
+        }
+
+        p {
+            margin: 24px 0 0;
+            line-height: 1.8;
+            color: #d1d5db;
+            font-size: 1.05rem;
+        }
+
+        .cards {
+            margin-top: 32px;
+            display: grid;
+            gap: 16px;
+        }
+
+        .card {
+            display: block;
+            padding: 18px 22px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(148, 163, 184, 0.14);
+            text-decoration: none;
+            color: #f8fafc;
+            transition: transform 0.18s ease, background 0.18s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .card strong {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .card span {
+            color: #cbd5e1;
+            line-height: 1.6;
+            font-size: 0.98rem;
+        }
+
+        .hint {
+            margin-top: 34px;
+            color: #9ca3af;
+            line-height: 1.7;
+            font-size: 0.96rem;
+        }
+
+        @media (max-width: 760px) {
+            .panel {
+                padding: 28px 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="panel">
+        <h1>歡迎來到閱讀館</h1>
+        <p>這裡是你的閱讀導航頁面。左側選單可以快速切換不同閱讀類別，點選後內容會在此處載入。</p>
+
+        <div class="cards">
+            <a class="card" href="junior.html" target="view">
+                <strong>📕 初中閱讀</strong>
+                <span>適合從短篇故事開始，建立閱讀習慣與基礎理解能力。</span>
+            </a>
+            <a class="card" href="kaoyan.html" target="view">
+                <strong>📚 考研閱讀</strong>
+                <span>如果你希望提升閱讀深度與論述分析能力，這裡是最佳入口。</span>
+            </a>
+            <a class="card" href="The Yellow Carpet Revolution.html" target="view">
+                <strong>✨ 最新推薦</strong>
+                <span>直接開啟這篇《The Yellow Carpet Revolution》，享受心靈與自我探索的故事。</span>
+            </a>
+        </div>
+
+        <p class="hint">建議：若你想要更清楚的預設頁面，我也可以幫你把這裡改成「熱門章節推薦」「最新上架」或「學習進度概覽」。</p>
+    </div>
+</body>
+
+</html>

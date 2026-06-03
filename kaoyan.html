@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <title>考研閱讀</title>
+    <style>
+        :root {
+            color-scheme: light;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+            background: linear-gradient(180deg, #fef8f2 0%, #f3e8db 100%);
+            color: #3d2b22;
+        }
+
+        .page {
+            min-height: 100vh;
+            padding: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: min(100%, 820px);
+            background: rgba(255, 250, 244, 0.96);
+            border: 1px solid rgba(150, 111, 76, 0.18);
+            border-radius: 28px;
+            box-shadow: 0 26px 80px rgba(112, 88, 65, 0.14);
+            padding: 42px 44px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2rem, 4vw, 3rem);
+            letter-spacing: -0.05em;
+            line-height: 1.05;
+        }
+
+        .subtitle {
+            margin: 14px 0 32px;
+            color: #6c5546;
+            font-size: 1rem;
+            line-height: 1.85;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            gap: 18px;
+        }
+
+        li {
+            margin: 0;
+        }
+
+        .card {
+            display: block;
+            padding: 20px 24px;
+            background: #fff6ed;
+            border: 1px solid rgba(180, 137, 98, 0.2);
+            border-radius: 20px;
+            color: #3d2b22;
+            text-decoration: none;
+            transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 18px 32px rgba(113, 83, 58, 0.14);
+            background: #fff1df;
+        }
+
+        .card span {
+            display: block;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .card p {
+            margin: 0;
+            color: #725844;
+            line-height: 1.7;
+            font-size: 0.96rem;
+        }
+
+        @media (max-width: 680px) {
+            .page {
+                padding: 20px;
+            }
+
+            .container {
+                padding: 28px 22px;
+            }
+
+            .card {
+                padding: 18px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <h1>📚 考研閱讀</h1>
+            <p class="subtitle">精選閱讀列表，幫你在考研備考期間也能保持閱讀節奏與語感提升。</p>
+            <ul>
+                <li>
+                    <a class="card" href="The Equation of Tomorrow.html" target="view">
+                        <span>The Equation of Tomorrow</span>
+                        <p>未來題材與人性抉擇的故事，適合練習閱讀理解與情境推理。</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="card" href="The Port of Genuine Dreams.html" target="view">
+                        <span>The Port of Genuine Dreams</span>
+                        <p>夢想港灣中的真實情感，適合增強段落分析與細節抓取能力。</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="card" href="The Yellow Carpet Revolution.html" target="view">
+                        <span>The Yellow Carpet Revolution</span>
+                        <p>心靈與自我探索的故事，適合訓練隱含意義與情感變化的閱讀理解。</p>
+                    </a>
+                </li>
+                <!-- <li>
+                    <a class="card" href="Future City.html" target="view">
+                        <span>Future City</span>
+                        <p>未來城市與人文思辨主題，適合訓練論述型閱讀與思考深度。</p>
+                    </a>
+                </li> -->
+                <li>
+                    <a class="card" href="The Capsule of March.html" target="view">
+                        <span>The Capsule of March</span>
+                        <p>時空膠囊敘事，適合提升篇章結構與細節縱覽能力。</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="card" href="The Circus Beyond the Dorm.html" target="view">
+                        <span>The Circus Beyond the Dorm</span>
+                        <p>宿舍裡的奇幻馬戲團故事，適合加強想像力與情節推理。</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="card" href="The Daytime Experiment.html" target="view">
+                        <span>The Daytime Experiment</span>
+                        <p>科學實驗與人性探索，適合練習理論細節與論證閱讀。</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="card" href="The Department of Astronomy Report.html" target="view">
+                        <span>The Department of Astronomy Report</span>
+                        <p>天文調查報告風格，適合提升資訊萃取與專業語境理解。</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="card" href="The Fisherman’s Diagnosis.html" target="view">
+                        <span>The Fisherman’s Diagnosis</span>
+                        <p>海邊醫療與心靈對話，適合練習同理心與背景資訊判讀。</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="card" href="The Glacier Ultimatum.html" target="view">
+                        <span>The Glacier Ultimatum</span>
+                        <p>冰川危機題材，適合提升環境議題與因果關係閱讀。</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="card" href="The Prince of Silver County.html" target="view">
+                        <span>The Prince of Silver County</span>
+                        <p>城鎮傳奇與人物描寫，適合練習人際與情節細節分析。</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="card" href="The Spiral Symposium.html" target="view">
+                        <span>The Spiral Symposium</span>
+                        <p>學術討論與推理交錯，適合提升論述結構與深度理解。</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
