@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>單詞匯總入口</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #0b1220;
+            color: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        .card {
+            width: min(100%, 900px);
+            background: rgba(15, 23, 42, 0.96);
+            border: 1px solid rgba(148, 163, 184, 0.12);
+            border-radius: 24px;
+            padding: 32px;
+            box-shadow: 0 24px 60px rgba(15, 23, 42, 0.35);
+        }
+        h1 {
+            margin: 0 0 16px;
+            font-size: clamp(2rem, 4vw, 3.2rem);
+        }
+        p {
+            margin: 0 0 32px;
+            line-height: 1.8;
+            color: #cbd5e1;
+            max-width: 72ch;
+        }
+        .links {
+            display: grid;
+            gap: 16px;
+        }
+        .links a {
+            display: block;
+            padding: 18px 22px;
+            border-radius: 16px;
+            text-decoration: none;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(148, 163, 184, 0.14);
+            color: #f8fafc;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+        .links a:hover {
+            transform: translateY(-2px);
+            background: rgba(148, 163, 184, 0.16);
+        }
+        .links a span {
+            display: block;
+            color: #94a3b8;
+            margin-top: 6px;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <h1>單詞頁面入口</h1>
+        <p>請選擇你要查看的單詞庫：初中單詞、高中單詞、考研單詞。這些頁面已加入網站側邊欄，並可直接在主頁內瀏覽。</p>
+        <div class="links">
+            <a href="junior_words.html">📗 初中單詞 <span>junior_words.html</span></a>
+            <a href="senior_words.html">📘 高中單詞 <span>senior_words.html</span></a>
+            <a href="kaoyan_words.html">📙 考研單詞 <span>kaoyan_words.html</span></a>
+        </div>
+    </main>
+</body>
+</html>
