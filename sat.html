@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAT 閱讀</title>
+    <style>
+        :root {
+            color-scheme: light;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+            background: linear-gradient(180deg, #fef8f2 0%, #f3e8db 100%);
+            color: #3d2b22;
+        }
+
+        .page {
+            min-height: 100vh;
+            padding: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: min(100%, 820px);
+            background: rgba(255, 250, 244, 0.96);
+            border: 1px solid rgba(150, 111, 76, 0.18);
+            border-radius: 28px;
+            box-shadow: 0 26px 80px rgba(112, 88, 65, 0.14);
+            padding: 42px 44px;
+        }
+
+        header {
+            margin-bottom: 28px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2rem, 4vw, 3rem);
+            letter-spacing: -0.05em;
+            line-height: 1.05;
+        }
+
+        .subtitle {
+            margin: 14px 0 32px;
+            color: #6c5546;
+            font-size: 1rem;
+            line-height: 1.85;
+        }
+
+        .cards {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            gap: 18px;
+        }
+
+        .card {
+            display: block;
+            padding: 20px 24px;
+            background: #fff6ed;
+            border: 1px solid rgba(180, 137, 98, 0.2);
+            border-radius: 20px;
+            color: #3d2b22;
+            text-decoration: none;
+            transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 18px 32px rgba(113, 83, 58, 0.14);
+            background: #fff1df;
+        }
+
+        .card-title {
+            display: block;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .card-description {
+            margin: 0;
+            color: #725844;
+            line-height: 1.7;
+            font-size: 0.96rem;
+        }
+
+        .note {
+            margin-top: 28px;
+            color: #8a6d52;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 680px) {
+            .page {
+                padding: 20px;
+            }
+
+            .container {
+                padding: 28px 22px;
+            }
+
+            .card {
+                padding: 18px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page">
+        <section class="container">
+            <header>
+                <h1>📚 SAT 閱讀</h1>
+                <p class="subtitle">將 <strong>sat_books</strong> 裡的閱讀文章整合到此頁面，方便快速瀏覽與練習。</p>
+            </header>
+            <ul class="cards">
+                <li>
+                    <a class="card" href="sat_books/The Pharmacy Beneath the Volant Hill.html" target="view">
+                        <span class="card-title">The Pharmacy Beneath the Volant Hill</span>
+                        <p class="card-description">神祕藥房與山丘傳說的故事，適合練習敘事閱讀與氛圍理解。</p>
+                    </a>
+                </li>
+            </ul>
+            <p class="note">提示：若要新增 SAT 閱讀文章，只要把 HTML 檔放進 <code>sat_books</code>，並在此頁面新增對應卡片即可。</p>
+        </section>
+    </main>
+</body>
+
+</html>

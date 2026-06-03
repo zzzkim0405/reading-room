@@ -1,74 +1,156 @@
 ﻿<!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>單詞匯總入口</title>
     <style>
-        body {
-            margin: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        :root {
+            color-scheme: dark;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             background: #0b1220;
             color: #f8fafc;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
             min-height: 100vh;
+            background: radial-gradient(circle at top, rgba(96, 165, 250, 0.18), transparent 30%),
+                radial-gradient(circle at bottom, rgba(168, 85, 247, 0.16), transparent 22%),
+                #0b1220;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 24px;
         }
-        .card {
-            width: min(100%, 900px);
-            background: rgba(15, 23, 42, 0.96);
-            border: 1px solid rgba(148, 163, 184, 0.12);
-            border-radius: 24px;
+
+        .page {
+            width: min(100%, 980px);
             padding: 32px;
-            box-shadow: 0 24px 60px rgba(15, 23, 42, 0.35);
+            border-radius: 28px;
+            background: rgba(15, 23, 42, 0.94);
+            border: 1px solid rgba(148, 163, 184, 0.16);
+            box-shadow: 0 28px 80px rgba(15, 23, 42, 0.35);
         }
-        h1 {
-            margin: 0 0 16px;
-            font-size: clamp(2rem, 4vw, 3.2rem);
-        }
-        p {
-            margin: 0 0 32px;
-            line-height: 1.8;
-            color: #cbd5e1;
-            max-width: 72ch;
-        }
-        .links {
+
+        header {
             display: grid;
-            gap: 16px;
+            gap: 14px;
+            margin-bottom: 30px;
         }
-        .links a {
-            display: block;
-            padding: 18px 22px;
-            border-radius: 16px;
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2.4rem, 4vw, 3.4rem);
+            line-height: 1.05;
+        }
+
+        .subtitle {
+            margin: 0;
+            color: #cbd5e1;
+            line-height: 1.8;
+            max-width: 76ch;
+        }
+
+        .grid {
+            display: grid;
+            gap: 18px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(148, 163, 184, 0.12);
+            border-radius: 22px;
+            padding: 26px;
+            transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(96, 165, 250, 0.4);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .card h2 {
+            margin: 0 0 10px;
+            font-size: 1.3rem;
+        }
+
+        .card p {
+            margin: 0;
+            color: #cbd5e1;
+            line-height: 1.7;
+        }
+
+        .card a {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 18px;
+            padding: 12px 16px;
+            border-radius: 999px;
+            background: rgba(99, 102, 241, 0.18);
+            color: #e2e8f0;
             text-decoration: none;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(148, 163, 184, 0.14);
-            color: #f8fafc;
-            transition: transform 0.2s ease, background 0.2s ease;
+            font-weight: 600;
+            transition: background 0.2s ease, transform 0.2s ease;
         }
-        .links a:hover {
-            transform: translateY(-2px);
-            background: rgba(148, 163, 184, 0.16);
+
+        .card a:hover {
+            background: rgba(129, 140, 248, 0.3);
+            transform: translateY(-1px);
         }
-        .links a span {
-            display: block;
+
+        .hint {
+            margin-top: 28px;
             color: #94a3b8;
-            margin-top: 6px;
             font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 720px) {
+            .page {
+                padding: 24px;
+            }
+
+            .card {
+                padding: 22px;
+            }
         }
     </style>
 </head>
+
 <body>
-    <main class="card">
-        <h1>單詞頁面入口</h1>
-        <p>請選擇你要查看的單詞庫：初中單詞、高中單詞、考研單詞。這些頁面已加入網站側邊欄，並可直接在主頁內瀏覽。</p>
-        <div class="links">
-            <a href="junior_words.html">📗 初中單詞 <span>junior_words.html</span></a>
-            <a href="senior_words.html">📘 高中單詞 <span>senior_words.html</span></a>
-            <a href="kaoyan_words.html">📙 考研單詞 <span>kaoyan_words.html</span></a>
-        </div>
-    </main>
+    <article class="page">
+        <header>
+            <h1>單詞頁面入口</h1>
+            <p class="subtitle">已整合初中 / 高中 / 考研三套單詞庫。選擇對應級別即可查看單詞列表與詞義，頁面風格一致，方便快速切換。</p>
+        </header>
+        <section class="grid">
+            <div class="card">
+                <h2>初中單詞</h2>
+                <p>這是初中詞匯頁面，適合打基礎、複習常見中學詞彙。</p>
+                <a href="junior_words.html">前往初中單詞</a>
+            </div>
+            <div class="card">
+                <h2>高中單詞</h2>
+                <p>包含高中階段常見詞彙，已優化重複條目，可直接瀏覽。</p>
+                <a href="senior_words.html">前往高中單詞</a>
+            </div>
+            <div class="card">
+                <h2>考研單詞</h2>
+                <p>考研詞庫專頁，適合進階背誦與詞義對照。</p>
+                <a href="kaoyan_words.html">前往考研單詞</a>
+            </div>
+        </section>
+        <p class="hint">小提示：如果你想在側邊欄中快速切換，也已經新增了「初中單詞」、「高中單詞」、「考研單詞」三個入口。</p>
+    </article>
 </body>
+
 </html>

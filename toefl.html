@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>托福閱讀</title>
+    <style>
+        :root {
+            color-scheme: light;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+            background: linear-gradient(180deg, #fef8f2 0%, #f3e8db 100%);
+            color: #3d2b22;
+        }
+
+        .page {
+            min-height: 100vh;
+            padding: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: min(100%, 820px);
+            background: rgba(255, 250, 244, 0.96);
+            border: 1px solid rgba(150, 111, 76, 0.18);
+            border-radius: 28px;
+            box-shadow: 0 26px 80px rgba(112, 88, 65, 0.14);
+            padding: 42px 44px;
+        }
+
+        header {
+            margin-bottom: 28px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2rem, 4vw, 3rem);
+            letter-spacing: -0.05em;
+            line-height: 1.05;
+        }
+
+        .subtitle {
+            margin: 14px 0 0;
+            color: #6c5546;
+            font-size: 1rem;
+            line-height: 1.85;
+            max-width: 680px;
+        }
+
+        .cards {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            gap: 18px;
+        }
+
+        .card {
+            display: block;
+            padding: 22px 24px;
+            background: #fff6ed;
+            border: 1px solid rgba(180, 137, 98, 0.2);
+            border-radius: 20px;
+            color: #3d2b22;
+            text-decoration: none;
+            transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 18px 32px rgba(113, 83, 58, 0.14);
+            background: #fff1df;
+        }
+
+        .card-title {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .card-description {
+            margin: 0;
+            color: #725844;
+            line-height: 1.8;
+            font-size: 0.96rem;
+        }
+
+        .note {
+            margin-top: 32px;
+            color: #8a6d52;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 680px) {
+            .page {
+                padding: 20px;
+            }
+
+            .container {
+                padding: 28px 22px;
+            }
+
+            .card {
+                padding: 18px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page">
+        <section class="container">
+            <header>
+                <h1>📚 托福閱讀</h1>
+                <p class="subtitle">精選閱讀列表，幫你在托福備考期間保持閱讀節奏與語感提升，閱讀理解練習更有目標。</p>
+            </header>
+            <ul class="cards">
+                <li>
+                    <a class="card" href="toefl_books/The Glacier Ultimatum.html" target="view">
+                        <span class="card-title">The Glacier Ultimatum</span>
+                        <p class="card-description">未來題材與人性抉擇的故事，適合練習閱讀理解與情境推理。</p>
+                    </a>
+                </li>
+            </ul>
+            <p class="note">提示：若需要更多閱讀，請將其他 TOEFL 文章放入 <code>toefl_books</code> 資料夾，並在此新增對應連結。</p>
+        </section>
+    </main>
+</body>
+
+</html>
